@@ -106,5 +106,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Server is runing up at port ${port}.`)
+    console.log(`Server is running up at port ${port}.`)
 })
