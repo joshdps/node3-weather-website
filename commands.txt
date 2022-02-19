@@ -1,0 +1,14 @@
+For using git bash init
+
+1. Move to project directory
+2. send command: ssh-keygen -t rsa -b 4096 -C "pimentelsj@gmail.com"
+3. send command: ls -a -l ~/.ssh
+4. eval $(ssh-agent -s) // "" Only for Mac not windows or linux
+should response with text like: Agent pid 1423 wich indicates its OK
+5. Register the file command: ssh-add -k ~/.ssh/id_rsa
+shloud response -> Identity added: /c/Users/josue.pimentel/.ssh/id_rsa (pimentelsj@gmail.com)
+6. generate ssh Key on Github by submitting Key
+command from terminal: cat ~/.ssh/id_rsa.pub 
+7. New Key authenticated:
+command: ssh -T git@github.com      
+Response: Hi joshvzla! You've successfully authenticated, but GitHub does not provide shell access.
